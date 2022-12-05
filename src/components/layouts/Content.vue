@@ -7,8 +7,8 @@
 </template>
   
 <script>
-  import Home from '../views/Home.vue'
-  import PublishVacancy from '../views/PublishVacancy.vue'
+  import Home from '@/components/views/Home.vue'
+  import PublishVacancy from '@/components/views/PublishVacancy.vue'
 
   export default {
     name: 'Content',
