@@ -6,7 +6,13 @@
   
 <script>
   export default {
-    name: 'Home'
+    name: 'Home',
+    activated() {
+      console.log("Componente ativado.")
+    },
+    deactivated() {
+      console.log("Componente desativado.")
+    }
   }
 </script>
   
