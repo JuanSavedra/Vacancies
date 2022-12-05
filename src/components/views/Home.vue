@@ -2,23 +2,7 @@
   <div class="container py-4">
     <div class="row">
       <div class="col">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Pesquisar Vagas</h2>
-          <div class="row">
-            <div class="col">
-              <div class="form-group">
-                <label>Título da Vaga</label>
-                <input type="text" class="form-control" placeholder="Pesquise por palavras chaves, exemplo: 'PHP', 'Pleno', 'Júnior''">
-                <small class="from-text text-muted">Informe palavras que estejam relacionadas com a sua procura.</small>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-outline-dark mt-2" type="button">Buscar</button>
-            </div>
-          </div>
-        </div>
+        <SearchVacancy />
       </div>
     </div>
     <div class="row mt-5">
@@ -45,8 +29,13 @@
 </template>
   
 <script>
+  import SearchVacancy from '@/components/comuns/SearchVacancy.vue'
+
   export default {
     name: 'Home',
+    components: {
+      SearchVacancy
+    },
     activated() {
       console.log("Componente ativado.")
     },
