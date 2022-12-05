@@ -1,12 +1,21 @@
 <template>
   <div>
     <h1>Content</h1>
+    <Home />
+    <PublishVacancy />
   </div>
 </template>
   
 <script>
+  import Home from '../views/Home.vue'
+  import PublishVacancy from '../views/PublishVacancy.vue'
+
   export default {
-    name: 'Content'
+    name: 'Content',
+    components: {
+      Home,
+      PublishVacancy
+    }
   }
 </script>
   
