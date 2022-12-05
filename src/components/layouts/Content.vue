@@ -3,7 +3,9 @@
     <h1>Content</h1>
     <button v-on:click="content = 'Home'">Home</button>
     <button v-on:click="content = 'PublishVacancy'">Publicar Vaga</button>
-    <component v-bind:is="content" />
+    <keep-alive>
+      <component v-bind:is="content" />
+    </keep-alive>
   </div>
 </template>
   
