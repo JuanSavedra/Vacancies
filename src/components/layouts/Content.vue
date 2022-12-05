@@ -1,8 +1,9 @@
 <template>
   <div>
     <h1>Content</h1>
-    <Home />
-    <PublishVacancy />
+    <button v-on:click="content = 'Home'">Home</button>
+    <button v-on:click="content = 'PublishVacancy'">Publicar Vaga</button>
+    <component v-bind:is="content" />
   </div>
 </template>
   
@@ -15,7 +16,10 @@
     components: {
       Home,
       PublishVacancy
-    }
+    },
+    data: () => ({
+      content: 'Home'
+    })
   }
 </script>
   
