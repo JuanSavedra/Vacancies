@@ -7,22 +7,13 @@
     </div>
     <div class="row mt-5">
       <div class="col-4">
-        <div class="h-100 p-5 rounded-3 border bg-dark text-white">
-          <p>Vagas Abertas</p>
-          <h2>25</h2>
-        </div>
+        <Indicator />
       </div>
       <div class="col-4">
-        <div class="h-100 p-5 rounded-3 border bg-dark text-white">
-          <p>Profissionais Cadastrados</p>
-          <h2>125</h2>
-        </div>
+        <Indicator />
       </div>
       <div class="col-4">
-        <div class="h-100 p-5 rounded-3 border bg-light text-dark">
-          <p>Visitantes Online</p>
-          <h2>15</h2>
-        </div>
+        <Indicator />
       </div>
     </div>
   </div>
@@ -30,11 +21,13 @@
   
 <script>
   import SearchVacancy from '@/components/comuns/SearchVacancy.vue'
+  import Indicator from '@/components/comuns/Indicator.vue'
 
   export default {
     name: 'Home',
     components: {
-      SearchVacancy
+      SearchVacancy,
+      Indicator
     },
     activated() {
       console.log("Componente ativado.")
