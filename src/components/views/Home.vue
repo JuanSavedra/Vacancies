@@ -13,7 +13,7 @@
         <Indicator title="Profissionais cadastrados" indicator="225" bg="bg-dark" color="text-white" />
       </div>
       <div class="col-4">
-        <Indicator title="Visitantes online" indicator="25" bg="bg-light" color="text-dark" />
+        <Indicator title="Visitantes online" v-bind:indicator="usersOnline" bg="bg-light" color="text-dark" />
       </div>
     </div>
   </div>
@@ -29,12 +29,17 @@
       SearchVacancy,
       Indicator
     },
-    activated() {
-      console.log("Componente ativado.")
+    data: () => ({
+      usersOnline: 0
+    }),
+    methods: {
+      getUsersOnline() {
+        this.usersOnline = Math.floor(Math.random() * 101)
+      }
     },
-    deactivated() {
-      console.log("Componente desativado.")
-    }
+    created() {
+      setInterval(this.getUsersOnline, 1000)
+    },
   }
 </script>
   
