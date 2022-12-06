@@ -7,13 +7,13 @@
     </div>
     <div class="row mt-5">
       <div class="col-4">
-        <Indicator />
+        <Indicator title="Vagas abertas" indicator="100" />
       </div>
       <div class="col-4">
-        <Indicator />
+        <Indicator title="Profissionais cadastrados" indicator="225" />
       </div>
       <div class="col-4">
-        <Indicator />
+        <Indicator title="Visitantes online" indicator="25" />
       </div>
     </div>
   </div>
