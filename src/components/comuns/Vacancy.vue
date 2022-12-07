@@ -15,6 +15,16 @@
 <script>
   export default {
     name: "Vacancy",
-    props: ['title', 'description', 'salary', 'model', 'type', 'publicationDate']
+    props: {
+      title: String,
+      description: String,
+      salary: [Number, String],
+      model: String,
+      type: String,
+      publicationDate: String
+    },
+    created() {
+
+    }
   }
 </script>
