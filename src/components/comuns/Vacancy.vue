@@ -22,7 +22,9 @@
       },
       description: {
         type: String, 
-        required: true
+        default() {
+          return "O contratante não adicionou uma descrição para esse curso"
+        }
       },
       salary: {
         type: [String, Number], 
