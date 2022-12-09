@@ -64,15 +64,21 @@
     }),
     methods: {
       saveVacancy() {
-        let vacancy = {
+        let vacancys = JSON.parse(localStorage.getItem('vacancys'))
+
+        if (!vacancys) {
+          vacancys = []
+        }
+
+        vacancys.push({
           title: this.title,
-          description: this.title,
+          description: this.description,
           salary: this.salary,
           model: this.model,
           type: this.type
-        }
+        })
 
-        localStorage.setItem('vacancys', JSON.stringify(vacancy))
+        localStorage.setItem('vacancys', JSON.stringify(vacancys))
       }
     }
   }
