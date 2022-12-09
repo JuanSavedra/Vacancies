@@ -7,14 +7,7 @@
     </div>
     <div class="row mt-5" v-for="(vacancy, index) in vacancys" v-bind:key="index">
       <div class="col">
-        <Vacancy 
-          v-bind:title="vacancy.title"
-          v-bind:description="vacancy.description" 
-          v-bind:salary="vacancy.salary" 
-          v-bind:model="vacancy.model" 
-          v-bind:type="vacancy.type" 
-          v-bind:publicationDate="vacancy.publicationDate" 
-        />
+        <Vacancy v-bind="vacancy"/>
       </div>
     </div>
     <div class="row mt-5">
