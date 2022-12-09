@@ -16,12 +16,30 @@
   export default {
     name: "Vacancy",
     props: {
-      title: String,
-      description: String,
-      salary: [Number, String],
-      model: String,
-      type: String,
-      publicationDate: String
+      title: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String, 
+        required: true
+      },
+      salary: {
+        type: [String, Number], 
+        required: true
+      },
+      model: {
+        type: String, 
+        required: true
+      },
+      type: {
+        type: String, 
+        required: true
+      },
+      publicationDate: {
+        type: String, 
+        required: true
+      }
     },
     created() {
 
